@@ -4,11 +4,14 @@
 
 int s_len(int i);
 int digit_at(int x, int idx);
-void print_split_num(int x);
+int sum_each_digit(int x);
+
+// 我一定要吐槽一句：这道题和 0851 有什么区别啊，工具函数拉过来改两下就成了 2333
 
 /**
  * @author Sapphira Tempest (23211231127)
- * @brief 顺序输出整数的各位数字 (循环)
+ * @brief 统计整数的数字和（函数）
+ * @date 2023.9.22
  */
 int main() {
     int times;
@@ -21,8 +24,9 @@ int main() {
     }
 
     for (int i = 0; i < times; i++) {
-        print_split_num(inps[i]);
+        printf("%d\n", sum_each_digit(abs(inps[i])));
     }
+    return 0;
 }
 
 int s_len(int i) {
@@ -36,9 +40,10 @@ int digit_at(int x, int idx) {
     return x / de % 10;
 }
 
-void print_split_num(int x) {
+int sum_each_digit(int x) {
+    int rst = 0; // 记得要初始化，不然会导致累加...
     for (int i = 0; i < s_len(x); i++) {
-        printf("%d ", digit_at(x, s_len(x) - i - 1));
+        rst += digit_at(x, s_len(x) - i - 1);
     }
-    printf("\n");
+    return rst;
 }
