@@ -1,0 +1,12 @@
+{
+    "files.associations": {
+        "random": "c",
+        "limits": "c",
+        "algorithm": "c",
+        "*.tcc": "c",
+        "cmath": "c",
+        "numeric": "c",
+        "cinttypes": "c",
+        "cstdlib": "c"
+    }
+}
