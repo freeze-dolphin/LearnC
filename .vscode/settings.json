@@ -7,6 +7,9 @@
         "cmath": "c",
         "numeric": "c",
         "cinttypes": "c",
-        "cstdlib": "c"
+        "cstdlib": "c",
+        "bit": "c",
+        "functional": "c",
+        "string_view": "c"
     }
 }
